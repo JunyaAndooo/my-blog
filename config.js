@@ -3,8 +3,8 @@
 module.exports = {
   url: 'https://lumen.netlify.com',
   pathPrefix: '/',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  title: 'Blog by Ando Junya',
+  subtitle: '安藤順也のブログ',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
@@ -12,32 +12,28 @@ module.exports = {
   useKatex: false,
   menu: [
     {
-      label: 'Articles',
+      label: '全ての記事',
       path: '/'
     },
     {
-      label: 'About me',
+      label: 'プロフィール',
       path: '/pages/about'
-    },
-    {
-      label: 'Contact me',
-      path: '/pages/contacts'
     }
   ],
   author: {
-    name: 'John Doe',
+    name: '安藤順也',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: '安藤順也です。エンジニアです（このブログおよびデザインは gatsby-starter-lumen さんから拝借しております）',
     contacts: {
       email: '',
-      facebook: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
+      facebook: 'profile.php?id=100005555296352',
+      telegram: '',
+      twitter: 'AJ86277020',
+      github: 'JunyaAndooo',
       rss: '',
       vkontakte: '',
-      linkedin: '#',
-      instagram: '#',
+      linkedin: '',
+      instagram: '',
       line: '',
       gitlab: '',
       weibo: '',
