@@ -177,18 +177,18 @@ module.exports = {
         }))
       }
     },
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: siteConfig.title,
-        short_name: siteConfig.title,
-        start_url: '/',
-        background_color: '#FFF',
-        theme_color: '#F7A046',
-        display: 'standalone',
-        icon: 'static/photo.jpg'
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-manifest',
+    //   options: {
+    //     name: siteConfig.title,
+    //     short_name: siteConfig.title,
+    //     start_url: '/',
+    //     background_color: '#FFF',
+    //     theme_color: '#F7A046',
+    //     display: 'standalone',
+    //     icon: 'static/photo.jpg'
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-offline',
       options: {

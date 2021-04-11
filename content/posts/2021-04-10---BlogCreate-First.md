@@ -1,5 +1,5 @@
 ---
-title: GatsbyとNetlifyで技術ブログの新規設置してみたい
+title: GatsbyとNetlifyで技術ブログを新規設置します
 date: "2021-04-10T21:59:00Z"
 template: "post"
 draft: false
@@ -10,15 +10,6 @@ tags:
   - "Gatsby"
 description: "新しくブログを開設しましたので、その手順をまとめてみたいと思います。GatsbyとNetlifyであまり手間をかけずに設置できればと思います。"
 ---
-
-
-- <img src="https://img.shields.io/badge/node-v14.15.5-brightgreen" style="float: left;">
-<img src="https://img.shields.io/badge/gatsby-3.2.0-brightgreen" style="float: left;">
-<br style="clear: both" />
-
-- [Gatsbyのインストール](#gatsbyのインストール)
-- [ブログの構築](#ブログの構築)
-- [自分用にカスタマイズ](#自分用にカスタマイズ)
 
 システム開発の技術者として10年近く仕事してきたのですが、アウトプットをしてこなかったことに気づき、これから少しずつでもしていければと思いまして、ブログでもつけてみようかと思いました。
 
@@ -35,6 +26,18 @@ GatsbyとNetlifyでお手軽にできるという記事を読みまして、こ�
 https://qiita.com/k-penguin-sato/items/7554e5e7e90aa10ae225
 
 ---
+
+次のような流れとなります。
+
+- <img src="https://img.shields.io/badge/node-v14.15.5-brightgreen" style="float: left;">
+<img src="https://img.shields.io/badge/gatsby-3.2.0-brightgreen" style="float: left;">
+<br style="clear: both" />
+
+- [Gatsbyのインストール](#gatsbyのインストール)
+- [ブログの構築](#ブログの構築)
+- [自分用にカスタマイズ](#自分用にカスタマイズ)
+- [GitHubにプッシュ](#githubにプッシュ)
+- [Netlifyにデプロイ](#netlifyにデプロイ)
 
 ## Gatsbyのインストール
 
@@ -147,7 +150,7 @@ success Building development bundle - 10.223s
 
 ## 自分用にカスタマイズ
 
-下記ファイルを書き換えます。photo.jpgは自分の写真で上書きします。
+下記ファイルを書き換えれ場問題ないような作りになっていました。`photo.jpg`は自分の写真で上書きします。
 
 - config.js
 - static/photo.jpg
@@ -163,7 +166,7 @@ module.exports = {
   subtitle: '安藤順也のブログ',
   copyright: '© All rights reserved.',
   disqusShortname: '',
-  postsPerPage: 4,
+  postsPerPage: 10,
   googleAnalyticsId: 'UA-73379983-2',
   useKatex: false,
   menu: [
@@ -209,3 +212,59 @@ module.exports = {
 再起動すればこんな感じになりました。
 
 ![キャプチャ2](https://user-images.githubusercontent.com/67815204/114272812-9d2e8700-9a52-11eb-9b51-5e55370360ca.JPG)
+
+## GitHubにプッシュ
+
+`Netlify`の場合はデプロイしたいサイトがGitHub/GitLab/Bitbucketで管理されている必要があります。  
+GitHubでやっております。
+
+あらかじめGitHub上で`my-blog`というリポジトリを作成してあります。
+
+```bash
+$ git remote add origin https://github.com/JunyaAndooo/my-blog.git
+$ git branch -M main
+$ git add .
+$ git commit -m "Initial commit"
+$ git push -u origin main
+```
+
+## Netlifyにデプロイ
+
+`Netlify`とは、静的コンテンツ（HTML・CSS・JavaScript）を配信してくれる Web サービスとなっております。  
+Gitリポジトリサービスと連携することで、`git push`をした途端にサイトを更新することができます（逆にmainブランチにマージするときは注意が必要）。
+
+https://app.netlify.com/
+
+こちらからアカウントを作成しました。
+
+登録していきたいと思います。トップページの`New site from git`をクリックします。
+
+![キャプチャ](https://user-images.githubusercontent.com/67815204/114294077-a5c8a100-9ad6-11eb-9ef8-accc3384b256.JPG)
+
+`GitHub`を選択します。
+
+![キャプチャ](https://user-images.githubusercontent.com/67815204/114294095-de687a80-9ad6-11eb-90f6-1f6c9465a287.JPG)
+
+対象のリポジトリを選択します（最初はないので`Configure the Netlify app on GitHub.`から選択しました）。
+
+![キャプチャ](https://user-images.githubusercontent.com/67815204/114294115-196aae00-9ad7-11eb-98d4-868f079158a0.JPG)
+
+あとは特に設定を変えずに、`Deploy site`をクリックします。
+
+![キャプチャ](https://user-images.githubusercontent.com/67815204/114294135-559e0e80-9ad7-11eb-99e7-5f6548c5fcc1.JPG)
+
+10分くらいかかると思いますので、気長に待ちましょう。  
+作成したサイト情報の詳細ページからデプロイ状況は確認できます。
+
+![キャプチャ](https://user-images.githubusercontent.com/67815204/114294163-9b5ad700-9ad7-11eb-8853-c1d241054565.JPG)
+
+デプロイが完了したら、リンクが払い出されていますので、アクセスして確認します。
+
+`Domain setting'から`.netlify.com`の前の部分だけですが、変更可能です。
+
+非常に簡単にブログを始めることができました。
+
+下記の修正は加えて完了かなと。
+
+- `Google Analytics`の登録
+- 日本語フォントの登録
