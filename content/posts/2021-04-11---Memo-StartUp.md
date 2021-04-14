@@ -2,7 +2,7 @@
 title: IT系のスタートアップ企業がどんなサービスを展開しているのか気になる
 date: "2021-04-11T15:43:00Z"
 template: "post"
-draft: true
+draft: false
 slug: "2020-start-up"
 category: "雑談"
 tags:
