@@ -182,7 +182,7 @@ module.exports = {
   author: {
     name: '安藤順也',
     photo: '/photo.jpg',
-    bio: '安藤順也です。エンジニアです（このブログおよびデザインは gatsby-starter-lumen さんから拝借しております）',
+    bio: '安藤順也です。エンジニアです。でもjavaが好きです',
     contacts: {
       email: '',
       facebook: 'profile.php?id=100005555296352',
@@ -260,7 +260,7 @@ https://app.netlify.com/
 
 デプロイが完了したら、リンクが払い出されていますので、アクセスして確認します。
 
-`Domain setting'から`.netlify.com`の前の部分だけですが、変更可能です。
+`Domain setting`から`.netlify.com`の前の部分だけですが、変更可能です。
 
 非常に簡単にブログを始めることができました。
 

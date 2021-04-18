@@ -23,7 +23,7 @@ module.exports = {
   author: {
     name: '安藤順也',
     photo: '/photo.jpg',
-    bio: '安藤順也です。エンジニアです（このブログおよびデザインは gatsby-starter-lumen さんから拝借しております）',
+    bio: '安藤順也です。javaが大好きなエンジニアです',
     contacts: {
       email: '',
       facebook: 'profile.php?id=100005555296352',
