@@ -2,7 +2,7 @@
 title: 自動化技術の発展が目覚ましい
 date: "2021-04-19T15:43:00Z"
 template: "post"
-draft: true
+draft: false
 slug: "automatic-technology-articles"
 category: "雑談"
 tags:
